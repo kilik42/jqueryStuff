@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+
+
+  <ul class="list">
+    <li>one</li>
+    <li class ="special">two</li>
+    <li>three</li>
+    <li>
+      <ul class="sublist">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+      </ul>
+      </li>
+  </ul>
+
+
+
+  <script src="https://code.jquery.com/jquery.min.js"></script>
+
+  <script>
+  $(function(){
+    //dom traversal
+      // $('ul: first').children();
+      // $('li:first').siblings();
+      // $('li:first').parent();
+      $('li').on('click', function(){
+        // $(this).next().hide();
+        // $(this).remove('special');
+        // $(this).siblings().addClass('special');
+        // $(this).find('li').filter('.special').remove();
+        if($(this).parent().is('.sublist')){
+          $(this).hide();
+        }
+
+      });
+
+
+
+
+  });
+  </script>
+</body>
+</html>
