@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <div class="container">
+    <div class="jumbotron">
+      <button class="panel-button" data-panelid ="panel1">btn1</button>
+      <button class="panel-button" data-panelid ="panel2">btn2</button>
+      <button class="panel-button" data-panelid ="panel3">btn3</button>
+      <button class="panel-button" data-panelid ="panel4">btn4</button>
+      <button class="panel-button" >btn1</button>
+    </div>
+    <div class="row">
+
+      <div class="col-xs-3">
+        <div id="panel1" class="panel panel-primary">
+          <div class="panel-hiding">
+            #panel1
+          </div>
+          <div class="panel-body">
+
+          </div>
+        </div>
+      </div>
+
+      <div class="col-xs-3">
+        <div id="panel2" class="panel panel-primary">
+          <div class="panel-hiding">
+            #panel2
+          </div>
+          <div class="panel-body">
+
+          </div>
+        </div>
+      </div>
+
+      <div class="col-xs-3">
+        <div id="pane3" class="panel panel-primary">
+          <div class="panel-hiding">
+            #panel3
+          </div>
+          <div class="panel-body">
+
+          </div>
+        </div>
+      </div>
+
+      <div class="col-xs-3">
+        <div id="panel4" class="panel panel-primary">
+          <div class="panel-hiding">
+            #panel4
+          </div>
+          <div class="panel-body">
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+  </div>
+<!--   end container -->
+
+
+
+
+
+<script src="https://code.jquery.com/jquery.min.js"></script>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script>
+  $(function(){
+
+    var content = "my new awwesome content";
+    $('.panel-button').on('click', function(){
+        var panelId = $(this).attr('data-panelid');
+        // alert(panelId);
+        $('#'+panelId).toggle();
+        $('#'+panelId + ' .panel-body').html('');
+    });
+
+
+
+  });
+</script>
+
+</body>
+</html>
